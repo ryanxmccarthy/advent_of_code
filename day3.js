@@ -4,19 +4,26 @@ var gamma = '';
 var epsilon = '';
 var zeros = 0;
 var ones = 0;
+var mostCommon = []
+var leastCommon = []
+
 
 for (var i = 0; i < input.length; i++) {
-    if (input[i][0] === "0") {     
-        zeros++;
-    } else {
-        ones++;
+    for (var j = 0; j < input[i].length; j++) {
+        if (input[i][j] === "0") {     
+            zeros++;
+        } else {
+            ones++;
+        }
     }
+
+    if (zeros > ones) {
+        gamma += 0
+    } else {
+        gamma += 1
+    }  
 }
 
-if (zeros > ones) {
-    gamma += 0
-} else {
-    gamma += 1
-}
+
 
 console.log(zeros, ones, gamma);

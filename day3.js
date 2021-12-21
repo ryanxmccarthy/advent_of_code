@@ -22,4 +22,22 @@ for (var j = 0; j < 12; j++) {
     }  
 }
 
-console.log(zeros, ones, gamma);
+console.log(zeros, ones, parseInt(gamma, 2));
+
+for (var j = 0; j < 12; j++) {
+    for (var i = 0; i < input.length; i++) {
+        if (input[i][j] === "0") {     
+            zeros++;
+        } else {
+            ones++;
+        }
+    }
+    
+    if (zeros < ones) {
+        epsilon += 0
+    } else {
+        epsilon += 1
+    }  
+}
+
+console.log(zeros, ones, parseInt(epsilon, 2));
